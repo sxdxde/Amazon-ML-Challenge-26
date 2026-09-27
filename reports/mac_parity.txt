@@ -1,0 +1,9 @@
+parity: 50 strings (incl. French accents, Devanagari, empty)
+[intfloat/multilingual-e5-small] ST pooling: Pooling({'embedding_dimension': 384, 'pooling_mode': 'mean', 'include_prompt': True})
+  MLX(mean+L2, fp16) vs ST(cpu fp32): mean cos 0.99909  min 0.95450
+  MLX(cls) vs ST: mean cos 0.90982   <- wrong pooling, for reference
+  PARITY PASS
+[mlx-community/bge-m3-mlx-fp16] ST pooling: Pooling({'embedding_dimension': 1024, 'pooling_mode': 'cls', 'include_prompt': True})
+  MLX(cls+L2, fp16) vs ST(cpu fp32): mean cos 1.00000  min 0.99996
+  MLX(mean) vs ST: mean cos 0.78459   <- wrong pooling, for reference
+  PARITY PASS

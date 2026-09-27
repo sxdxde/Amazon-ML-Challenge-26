@@ -1,0 +1,23 @@
+# challenge data and tooling (not redistributed)
+dataset/
+utils/
+
+# generated artifacts / outputs / caches
+artifacts*/
+output*/
+final_submission/
+logs/
+hf_cache/
+offline_wheels/
+*.parquet
+*.npy
+*.tsv
+*.zip
+
+# environments / python
+.venv*/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
